@@ -9,7 +9,7 @@ export default function ProjectCard({ imgurl, title, description, giturl, previe
         className="h-52 md:h-72 rounded-t-xl relative group "
         style={{ background: `url(${imgurl})`, backgroundSize: "cover" }}
       >
-        <div className="overlay  items-center justify-center absolute top-0 left-0 w-full h-full bg-[#181818] bg-opacity-0 hidden group-hover:flex group-hover:bg-opacity-80 transition-all duration-500 hover:white ">
+        <div className="overlay  items-center justify-center absolute top-0 left-0 w-full h-full bg-[#181818] bg-opacity-0 hidden group-hover:flex group-hover:bg-opacity-80  ease-in-out duration-[2000ms] hover:white ">
           <Link
             href={giturl}
             className="h-14 w-14 mr-2 border-2 relative rounded-full  border-[#ADN7BE] hover:border-white group-link"
