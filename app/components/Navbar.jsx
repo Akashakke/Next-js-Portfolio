@@ -5,6 +5,7 @@ import Navlink from "./Navlink";
 import logo from "../../public/images/logo.ico";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/solid";
 import MenuOverlay from "./MenuOverlay";
+import Image from "next/image";
 
 const navlinks = [
   {
@@ -34,7 +35,7 @@ export default function Navbar() {
           href={"/"}
           className="  md:text-5xl text-white font-semibold"
         >
-          <img src="/images/logo.ico" alt="logo" width={70} />
+          <Image src="/images/logo.ico" alt="logo" width={50} height={50} />
         </Link>
         <div className="mobile-menu block md:hidden">
           {!navbarOpen ? (

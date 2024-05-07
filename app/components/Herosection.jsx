@@ -10,20 +10,18 @@ export default function Herosection() {
       <div className="grid grid-cols-1 lg:grid-cols-12 mt-8">
         <div className="col-span-7 place-self-center text-center sm:text-left">
           <h1 className="text-white mb-4 text-4xl sm:text-4xl lg:text-6xl font-extrabold">
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600 ">
               Hello I'm
             </span>
             <br />
             <TypeAnimation
               sequence={[
                 "Akash",
-                1000,
-                "Web developer",
-                1000,
+                3000,
                 "Frontend developer",
-                1000,
+                3000,
                 "Full stack developer",
-                1000,
+                3000,
               ]}
               wrapper="span"
               speed={50}
@@ -35,7 +33,7 @@ export default function Herosection() {
             eveniet,
           </p>
           <div>
-            <button className="px-6 py-3 rounded-full mr-4 bg-gradient-to-br   bg-white hover:bg-slate-200  ">
+            <button className="px-6 py-3 text-black rounded-full mr-4 bg-gradient-to-br   bg-white hover:bg-slate-200  ">
               Hire Me
             </button>
             <button
