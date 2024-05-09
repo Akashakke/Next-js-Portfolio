@@ -55,6 +55,7 @@ export default function Herosection() {
               height={300}
               className="absolute transform  -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 profile-img"
               alt="profile"
+              priority
             />
           </motion.div>
         </div>

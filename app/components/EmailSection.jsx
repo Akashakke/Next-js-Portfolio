@@ -7,31 +7,20 @@ import Image from "next/image";
 
 export default function EmailSection() {
   const handleSubmit = async (e) => {
-    e.preventDefault();
     const data = {
       email: e.target.email.value,
       name: e.target.name.value,
       message: e.target.message.value,
     };
-    const JSONdata = JSON.stringify(data);
-    const endpoint = "/api/send";
-    // // Form the request for sending data to the server.
-    const options = {
-      // The method is POST because we are sending data.
+    e.preventDefault();
+    const response = await fetch("/api/send", {
       method: "POST",
-      // Tell the server we're sending JSON.
       headers: {
-        "Content-Type": "application/json",
+        "content-type": "application/json",
       },
-      // Body of the request is the JSON data we created above.
-      body: JSONdata,
-    };
-    // const response = await fetch(endpoint, options);
-    // const resData = await response.json();
-    // if (response.status === 200) {
-    //   console.log("Message sent.");
-    //   setEmailSubmitted(true);
-    // }
+      body: JSON.stringify(data),
+    });
+    console.log(await response.json());
   };
   return (
     <section
@@ -47,11 +36,11 @@ export default function EmailSection() {
           deserunt.
         </p>
         <div className="socials flex flex-row gap-2">
-          <Link href="github.com">
-            <Image src={GithubIcon} alt="github" />
+          <Link href="https://github.com/" target="_blank">
+            <Image src='/images/mail.png' width={50} height={50} alt="github" />
           </Link>
-          <Link href="linkdin.com">
-            <Image src={LinkedinIcon} alt="linkdin" />
+          <Link href="https://linkedin.com" className="ml-2" target="_blank">
+            <Image src='/images/linkedin (2).png' width={50} height={50} alt="linkdin" />
           </Link>
         </div>
       </div>
