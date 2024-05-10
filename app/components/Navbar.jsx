@@ -39,7 +39,7 @@ export default function Navbar() {
           href={"/"}
           className="  md:text-5xl text-white font-semibold"
         >
-          <Image src="/images/logo.ico" alt="logo" width={50} height={50}  />
+          <Image src="/images/logo.ico" alt="logo" width={50} height={50} priority  />
         </Link>
         <div className="mobile-menu block md:hidden">
           {!navbarOpen ? (

@@ -17,7 +17,10 @@ export async function POST(request) {
       },
     });
 
-    const mailOption = {
+
+
+
+    const replymailOption = {
       from: email,
       to: myemail,
       subject: "New Mail from Portfolio",
@@ -28,7 +31,7 @@ export async function POST(request) {
         `,
     };
 
-    const replymailOption = {
+    const mailOption = {
       from: myemail,
       to: email,
       subject: "New Mail from Portfolio",
