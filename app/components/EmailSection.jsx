@@ -1,24 +1,70 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
 import GithubIcon from "../../public/github-icon.svg";
 import LinkedinIcon from "../../public/linkedin-icon.svg";
 import Link from "next/link";
 import Image from "next/image";
+import toast, { Toaster } from "react-hot-toast";
 
 export default function EmailSection() {
-  const handleSubmit = async (e) => {
-    const data = {
-      email: e.target.email.value,
-      name: e.target.name.value,
-      message: e.target.message.value,
-    };
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
+  const [errors, setErrors] = useState({});
+  // console.log(errors);
+  const validateForm = () => {
+    let errors = {};
+    let isValid = true;
+
+    if (!formData.name.trim()) {
+      errors.name = "Name is required";
+      isValid = false;
+    }
+
+    if (!formData.email.trim()) {
+      errors.email = "Email is required";
+      isValid = false;
+    } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
+      errors.email = "Email is invalid";
+      isValid = false;
+    }
+
+    if (!formData.message.trim()) {
+      errors.message = "Message is required";
+      isValid = false;
+    }
+
+    setErrors(errors);
+    return isValid;
+  };
+
+  const handleSubmit = (e) => {
     e.preventDefault();
+    if (validateForm()) {
+      // Handle form submission
+      // sendmail()
+
+      console.log("Form submitted:", formData);
+    }
+  };
+
+  // console.log(formData);
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({ ...formData, [name]: value });
+  };
+
+  const sendmail = async () => {
+    
     const response = await fetch("/api/send", {
       method: "POST",
       headers: {
         "content-type": "application/json",
       },
-      body: JSON.stringify(data),
+      body: JSON.stringify(formData),
     });
     console.log(await response.json());
   };
@@ -37,10 +83,15 @@ export default function EmailSection() {
         </p>
         <div className="socials flex flex-row gap-2">
           <Link href="https://github.com/" target="_blank">
-            <Image src='/images/mail.png' width={50} height={50} alt="github" />
+            <Image src="/images/mail.png" width={50} height={50} alt="github" />
           </Link>
           <Link href="https://linkedin.com" className="ml-2" target="_blank">
-            <Image src='/images/linkedin (2).png' width={50} height={50} alt="linkdin" />
+            <Image
+              src="/images/linkedin (2).png"
+              width={50}
+              height={50}
+              alt="linkdin"
+            />
           </Link>
         </div>
       </div>
@@ -57,10 +108,14 @@ export default function EmailSection() {
               name="name"
               type="text"
               id="name"
-              required
+              onChange={handleChange}
+              value={formData.name}
+              style={errors.name && { border: "1px solid red" }}
+              // required
               className="bg-[#18191E] border border-[#33353F] placeholder-[#9CA2A9] text-gray-100 text-sm rounded-lg block w-full p-2.5"
               placeholder="Name"
             />
+            {errors.name && <span className="text-red-600">{errors.name}</span>}
           </div>
           <div className="mb-6">
             <label
@@ -73,10 +128,15 @@ export default function EmailSection() {
               name="email"
               type="email"
               id="email"
-              required
+              onChange={handleChange}
+              value={formData.email}
+              style={errors.email && { border: "1px solid red" }}
               className="bg-[#18191E] border border-[#33353F] placeholder-[#9CA2A9] text-gray-100 text-sm rounded-lg block w-full p-2.5"
               placeholder="jacob@google.com"
             />
+            {errors.email && (
+              <span className="text-red-600">{errors.email}</span>
+            )}
           </div>
 
           <div className="mb-6">
@@ -89,9 +149,15 @@ export default function EmailSection() {
             <textarea
               name="message"
               id="message"
+              onChange={handleChange}
+              value={formData.message}
+              style={errors.message && { border: "1px solid red" }}
               className="bg-[#18191E] border border-[#33353F] placeholder-[#9CA2A9] text-gray-100 text-sm rounded-lg block w-full p-2.5"
               placeholder="Let's talk about..."
             />
+            {errors.message && (
+              <span className="text-red-600">{errors.message}</span>
+            )}
           </div>
           <button
             type="submit"
