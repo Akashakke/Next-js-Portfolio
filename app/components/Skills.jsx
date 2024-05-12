@@ -46,7 +46,10 @@ const skillset = [
     title: "Git",
     link: "/images/skills/git.png",
   },
-];
+  {
+    title: "GitHub",
+    link: "/images/skills/github.png",
+  },];
 export default function Skills() {
   return (
     <section id="skills" className="text-center">
