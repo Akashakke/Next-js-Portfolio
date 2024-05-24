@@ -21,23 +21,23 @@ export default function Herosection() {
             </span>
             <br />
             {/* <div className="h-20 text-center sm:h-auto"> */}
-              <TypeAnimation
-                sequence={[
-                  "Akash",
-                  3000,
-                  "Frontend developer",
-                  3000,
-                  "Full stack developer",
-                  3000,
-                ]}
-                wrapper="span"
-                speed={50}
-                repeat={Infinity}
-              />
+            <TypeAnimation
+              sequence={[
+                "Akash",
+                3000,
+                "Frontend developer",
+                3000,
+                "Full stack developer",
+                3000,
+              ]}
+              wrapper="span"
+              speed={50}
+              repeat={Infinity}
+            />
             {/* </div> */}
           </h1>
           <p className="text-white text-base  sm:text-lg mb-6 lg:text-xl">
-            Full stack enthusiast currenlty working as a frontend developer
+            Full stack enthusiast currently working as a frontend developer
           </p>
           <div>
             <button className="px-6 py-3 text-black rounded-full mr-4   bg-white hover:bg-slate-200  ">
