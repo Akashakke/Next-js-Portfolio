@@ -3,35 +3,41 @@ import React from "react";
 import Image from "next/image";
 import { TypeAnimation } from "react-type-animation";
 // import profile from '/images/profile-img.png'
-import {motion} from 'framer-motion'
+import { motion } from "framer-motion";
 
 export default function Herosection() {
   return (
     <section className="lg:py-16" id="home">
       <div className="grid grid-cols-1 lg:grid-cols-12 mt-8 max-lg:mt-[6rem]">
-        <motion.div initial={{opacity:0 , scale:0.5}} animate={{opacity:1, scale:1}} transition={{duration:0.3}} className="col-span-8 place-self-center text-center sm:text-left justify-self-start">
+        <motion.div
+          initial={{ opacity: 0, scale: 0.5 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.3 }}
+          className="col-span-8 place-self-center text-center sm:text-left justify-self-start"
+        >
           <h1 className="text-white mb-4 text-4xl sm:text-4xl lg:leading-normal lg:text-6xl font-extrabold">
             <span className="bg-gradient-to-br from-cyan-500 to-sky-700 bg-clip-text text-transparent">
               Hello I'm
             </span>
             <br />
-            <TypeAnimation
-              sequence={[
-                "Akash",
-                3000,
-                "Frontend developer",
-                3000,
-                "Full stack developer",
-                3000,
-              ]}
-              wrapper="span"
-              speed={50}
-              repeat={Infinity}
-            />
+            {/* <div className="h-20 text-center sm:h-auto"> */}
+              <TypeAnimation
+                sequence={[
+                  "Akash",
+                  3000,
+                  "Frontend developer",
+                  3000,
+                  "Full stack developer",
+                  3000,
+                ]}
+                wrapper="span"
+                speed={50}
+                repeat={Infinity}
+              />
+            {/* </div> */}
           </h1>
           <p className="text-white text-base  sm:text-lg mb-6 lg:text-xl">
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quod,
-            eveniet,
+            Full stack enthusiast currenlty working as a frontend developer
           </p>
           <div>
             <button className="px-6 py-3 text-black rounded-full mr-4   bg-white hover:bg-slate-200  ">
@@ -48,7 +54,12 @@ export default function Herosection() {
           </div>
         </motion.div>
         <div className="col-span-4 place-self-center mt-4 lg:mt-0">
-          <motion.div initial={{opacity:0 , scale:0.5}} animate={{opacity:1, scale:1}} transition={{duration:0.3}}  className="rounded-full  w-[250px] h-[250px] lg:w-[400px] lg:h-[400px] relative">
+          <motion.div
+            initial={{ opacity: 0, scale: 0.5 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.3 }}
+            className="rounded-full  w-[250px] h-[250px] lg:w-[400px] lg:h-[400px] relative"
+          >
             <Image
               src="/images/hero-image.png"
               width={300}

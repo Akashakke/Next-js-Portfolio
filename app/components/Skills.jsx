@@ -24,7 +24,7 @@ const skillset = [
   },
   {
     title: "SQL",
-    link: "/images/skills/sql1.png",
+    link: "/images/skills/database.png",
   },
   {
     title: "MongoDB",

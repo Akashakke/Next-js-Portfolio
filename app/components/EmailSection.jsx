@@ -84,10 +84,11 @@ export default function EmailSection() {
       <div>
         <h5 className="text-xl font-bold text-white my-2">Let's Connect</h5>
         <p className="text-[#ADB7BE] mb-4 max-w-md">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid quo
-          tempora natus quae labore tenetur neque in omnis doloribus nam.
-          Quisquam quaerat, excepturi qui doloremque autem sunt vel repellat
-          deserunt.
+          Feel free to reach out to me for any inquiries, collaborations, or
+          project discussions. I am always open to exploring new opportunities
+          and connecting with like-minded professionals. Whether you have a
+          question or just want to say hello, I'd love to hear from you. Let's
+          work together to create something amazing!
         </p>
         <div className="socials flex flex-row gap-2">
           <Link href="mailto:akashpraveen576@gmail.com" target="_blank">

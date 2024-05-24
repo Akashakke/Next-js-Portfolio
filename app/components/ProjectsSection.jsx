@@ -2,7 +2,7 @@
 import React, { useState, useRef } from "react";
 import ProjectCard from "./ProjectCard";
 import ProjectTag from "./ProjectTag";
-import {inView, motion,useInView} from 'framer-motion'
+import { inView, motion, useInView } from "framer-motion";
 
 const projectsData = [
   {
@@ -10,7 +10,7 @@ const projectsData = [
     title: "Todo list",
     description: "Tools used - Next JS, Tailwind CSS",
     image: "/images/projects/todolist1.PNG",
-    tag: ["All", "Frontend"],
+    tag: ["All", "UI"],
     gitUrl: "https://github.com/Akashakke/todo_list",
     previewUrl: "https://todo-list-eight-bay-32.vercel.app/",
   },
@@ -19,7 +19,7 @@ const projectsData = [
     title: "Tic Tac Toe",
     description: "Tools used - Next JS, Tailwind CSS",
     image: "/images/projects/tictactoe.PNG",
-    tag: ["All", "Frontend"],
+    tag: ["All", "UI"],
     gitUrl: "https://github.com/Akashakke/tic-tac-toe",
     previewUrl: "https://tic-tac-toe-iota-one.vercel.app/",
   },
@@ -37,7 +37,7 @@ const projectsData = [
   //   title: "Food Ordering Application",
   //   description: "Project 4 description",
   //   image: "/images/projects/3.png",
-  //   tag: ["All", "Frontend"],
+  //   tag: ["All", "UI"],
   //   gitUrl: "/",
   //   previewUrl: "/",
   // },
@@ -46,7 +46,7 @@ const projectsData = [
   //   title: "React Firebase Template",
   //   description: "Authentication and CRUD operations",
   //   image: "/images/projects/5.png",
-  //   tag: ["All", "Frontend"],
+  //   tag: ["All", "UI"],
   //   gitUrl: "/",
   //   previewUrl: "/",
   // },
@@ -55,7 +55,7 @@ const projectsData = [
   //   title: "Full-stack Roadmap",
   //   description: "Project 5 description",
   //   image: "/images/projects/6.png",
-  //   tag: ["All", "Frontend"],
+  //   tag: ["All", "UI"],
   //   gitUrl: "/",
   //   previewUrl: "/",
   // },
@@ -63,18 +63,17 @@ const projectsData = [
 
 export default function ProjectsSection() {
   const [tag, setTag] = useState("All");
-  const ref = useRef(null)
-  const isInview = useInView(ref,{once:true})
-
+  const ref = useRef(null);
+  const isInview = useInView(ref, { once: true });
 
   const handleTagChange = (newTag) => {
     setTag(newTag);
   };
 
-const cardVariants = {
-  initial:{y:50,opacity:0},
-  animate:{y:0,opacity:1}
-}
+  const cardVariants = {
+    initial: { y: 50, opacity: 0 },
+    animate: { y: 0, opacity: 1 },
+  };
 
   const filteredProjects = projectsData.filter((project) =>
     project.tag.includes(tag)
@@ -93,8 +92,8 @@ const cardVariants = {
         />
         <ProjectTag
           onClick={handleTagChange}
-          name="Frontend"
-          isSelected={tag === "Frontend"}
+          name="UI"
+          isSelected={tag === "UI"}
         />
         <ProjectTag
           onClick={handleTagChange}
@@ -104,18 +103,22 @@ const cardVariants = {
       </div>
       <ul ref={ref} className="grid md:grid-cols-3 gap-8 md:gap-12">
         {filteredProjects.map((project, index) => (
-          <motion.li  key={index} variants={cardVariants} initial="initial" animate={isInview ? "animate" : "initial"}
-           transition={{duration:0.3,delay:index * 0.4}}>
-
-          <ProjectCard
-            key={project.id}
-            title={project.title}
-            description={project.description}
-            imgurl={project.image}
-            giturl={project.gitUrl}
-            previewurl={project.previewUrl}
+          <motion.li
+            key={index}
+            variants={cardVariants}
+            initial="initial"
+            animate={isInview ? "animate" : "initial"}
+            transition={{ duration: 0.3, delay: index * 0.4 }}
+          >
+            <ProjectCard
+              key={project.id}
+              title={project.title}
+              description={project.description}
+              imgurl={project.image}
+              giturl={project.gitUrl}
+              previewurl={project.previewUrl}
             />
-            </motion.li>
+          </motion.li>
         ))}
       </ul>
     </section>

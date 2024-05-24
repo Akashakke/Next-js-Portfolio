@@ -62,10 +62,11 @@ export default function AboutSection() {
         <div className="mt-4 md:mt-0 text-left flex flex-col h-full">
           <h2 className="text-4xl font-bold text-white mb-4">About Me</h2>
           <p className="text-base lg:text-lg">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime non
-            molestiae praesentium libero, voluptatem minima? Pariatur reiciendis
-            expedita numquam consectetur exercitationem provident facere ea quas
-            aperiam? Dolorem, nisi. Dolorem, veritatis.
+            I'm a full stack developer specializing in the MERN stack, currently
+            working as a frontend developer. Focused on developing Responsive
+            web applications and Perfomance optimization. I stay updated with
+            current trends in technology to continuously improve my skills and
+            deliver cutting-edge solutions.
           </p>
           <div className="flex flex-row mt-8">
             {/* <TabButton
