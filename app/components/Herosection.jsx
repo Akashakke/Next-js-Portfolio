@@ -4,6 +4,7 @@ import Image from "next/image";
 import { TypeAnimation } from "react-type-animation";
 // import profile from '/images/profile-img.png'
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 export default function Herosection() {
   return (
@@ -41,16 +42,16 @@ export default function Herosection() {
           </p>
           <div>
             <button className="px-6 py-3 text-black rounded-full mr-4   bg-white hover:bg-slate-200  ">
-              Hire Me
+              <Link href={"/#contact"}>Hire Me</Link>
             </button>
-            <button
+            {/* <button
               className="px-1 py-1 w-full sm:w-fit rounded-full bg-gradient-to-br   bg-transparent hover:bg-slate-800 text-white 
             mt-3"
             >
               <span className="block bg-[#121212] hover:bg-slate-800 rounded-full px-5 py-2">
                 Download CV
               </span>
-            </button>
+            </button> */}
           </div>
         </motion.div>
         <div className="col-span-4 place-self-center mt-4 lg:mt-0">

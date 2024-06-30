@@ -33,13 +33,16 @@ const navlinks = [
 export default function Navbar() {
   const [navbarOpen, setnavbarOpen] = useState(false);
   return (
-    <nav className="fixed mx-auto border border-[#33353F] top-0 left-0 right-0 z-10 bg-[#121212] bg-opacity-100">
+    <nav className="fixed mx-auto border border-[#33353F] border-x-0 top-0 left-0 right-0 z-10 bg-[#121212] bg-opacity-100">
       <div className="flex container lg:py-4 flex-wrap items-center justify-between max-w-[95%] mx-auto px-4 py-2">
-        <Link
-          href={"/"}
-          className="  md:text-5xl text-white font-semibold"
-        >
-          <Image src="/images/logo.ico" alt="logo" width={50} height={50} priority  />
+        <Link href={"/"} className="  md:text-5xl text-white font-semibold">
+          <Image
+            src="/images/logo.ico"
+            alt="logo"
+            width={50}
+            height={50}
+            priority
+          />
         </Link>
         <div className="mobile-menu block md:hidden">
           {!navbarOpen ? (

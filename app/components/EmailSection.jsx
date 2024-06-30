@@ -106,6 +106,19 @@ export default function EmailSection() {
               alt="linkdin"
             />
           </Link>
+          <Link
+            href="https://github.com/Akashakke"
+            className="ml-2"
+            target="_blank"
+          >
+            <Image
+              src="/images/skills/github.png"
+              width={50}
+              height={50}
+              alt="github"
+              className="p-1"
+            />
+          </Link>
         </div>
       </div>
       <div>

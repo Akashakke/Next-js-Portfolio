@@ -63,8 +63,8 @@ export default function AboutSection() {
           <h2 className="text-4xl font-bold text-white mb-4">About Me</h2>
           <p className="text-base lg:text-lg">
             I'm a full stack developer specializing in the MERN stack, currently
-            working as a frontend developer. Focused on developing Responsive
-            web applications and Perfomance optimization. I stay updated with
+            working as a frontend developer. Focused on developing responsive
+            web applications and perfomance optimization. I stay updated with
             current trends in technology to continuously improve my skills and
             deliver cutting-edge solutions.
           </p>
