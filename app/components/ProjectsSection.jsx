@@ -29,8 +29,8 @@ const projectsData = [
     description: "Tools used - MERN Stack,Cloudinary",
     image: "/images/projects/digiworld2.PNG",
     tag: ["All", "Full stack"],
-    gitUrl: "https://github.com/Akashakke/digi_world_vite",
-    previewUrl: "https://digi-world-vite.vercel.app/",
+    gitUrl: "https://github.com/Akashakke/NextGen_laptops",
+    previewUrl: "https://nextgen-laptops.vercel.app/",
   },
   // {
   //   id: 4,
