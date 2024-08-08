@@ -42,7 +42,12 @@ export default function Herosection() {
           </p>
           <div>
             <button className="px-6 py-3 text-black rounded-full mr-4   bg-white hover:bg-slate-200  ">
-              <Link href={"/#contact"}>Hire Me</Link>
+              <Link
+                href="https://drive.google.com/file/d/1yQX6OB74wSvp180VW-ZLjIAvcAjnRk2d/view?usp=sharing"
+                target="_blank"
+              >
+                Download resume
+              </Link>
             </button>
             {/* <button
               className="px-1 py-1 w-full sm:w-fit rounded-full bg-gradient-to-br   bg-transparent hover:bg-slate-800 text-white 
