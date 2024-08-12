@@ -52,7 +52,8 @@ export default function AboutSection() {
     <section className="text-white" id="about">
       <div className="md:grid md:grid-cols-2 gap-8  py-8 px-4 xl:gap-16 sm:py-16 xl:px-16">
         <Image
-          src="/images/mern-stack-developer.gif"
+          // src="/images/mern-stack-developer.gif"
+          src="https://res-console.cloudinary.com/dpkswvjz2/thumbnails/v1/image/private/v1723357577/bWVybi1zdGFjay1kZXZlbG9wZXJfanR1Z3Zm/as_is"
           width={500}
           height={500}
           priority

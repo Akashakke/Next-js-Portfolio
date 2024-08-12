@@ -193,8 +193,12 @@ export default function EmailSection() {
               id="message"
               onChange={handleChange}
               value={formData.message}
-              style={errors.message && { border: "1px solid red" }}
-              className="bg-[#18191E] border border-[#33353F] placeholder-[#9CA2A9] text-gray-100 text-sm rounded-lg block w-full p-2.5"
+              style={
+                errors.message
+                  ? { border: "1px solid red", height: "8rem" }
+                  : { height: "8rem" }
+              }
+              className="bg-[#18191E] border border-[#33353F] placeholder-[#9CA2A9] max-h-fit h-10 resize-none text-gray-100 text-sm rounded-lg block w-full p-2.5"
               placeholder="Let's talk about..."
             />
             <span

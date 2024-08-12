@@ -46,7 +46,7 @@ export default function Herosection() {
                 href="https://drive.google.com/file/d/1yQX6OB74wSvp180VW-ZLjIAvcAjnRk2d/view?usp=sharing"
                 target="_blank"
               >
-                Download resume
+                Resume
               </Link>
             </button>
             {/* <button

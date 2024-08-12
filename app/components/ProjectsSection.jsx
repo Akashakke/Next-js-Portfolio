@@ -8,7 +8,7 @@ const projectsData = [
   {
     id: 1,
     title: "Todo list",
-    description: "Tools used - Next JS, Tailwind CSS",
+    description: "Tools used - React JS",
     image: "/images/projects/todolist1.PNG",
     tag: ["All", "UI"],
     gitUrl: "https://github.com/Akashakke/todo_list",
@@ -17,7 +17,7 @@ const projectsData = [
   {
     id: 2,
     title: "Tic Tac Toe",
-    description: "Tools used - Next JS, Tailwind CSS",
+    description: "Tools used - React JS",
     image: "/images/projects/tictactoe.PNG",
     tag: ["All", "UI"],
     gitUrl: "https://github.com/Akashakke/tic-tac-toe",
