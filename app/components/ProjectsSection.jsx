@@ -26,7 +26,7 @@ const projectsData = [
   {
     id: 3,
     title: "E-commerce",
-    description: "Tools used - MERN Stack,Cloudinary",
+    description: "Tools used - MERN Stack,Bootstrap,Cloudinary",
     image: "/images/projects/digiworld2.PNG",
     tag: ["All", "Full stack"],
     gitUrl: "https://github.com/Akashakke/NextGen_laptops",

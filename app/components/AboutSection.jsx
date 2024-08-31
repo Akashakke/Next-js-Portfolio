@@ -38,7 +38,79 @@ const Tab_Data = [
     ),
   },
 ];
-
+const tabContent = [
+  {
+    title: "Experience",
+    id: "Experience",
+    content: [
+      {
+        title: "UI developer Trainee",
+        year: "2023 - 2024",
+        desc: "Techdew UX design Pvt Ltd",
+      },
+      {
+        title: "UI Engineer",
+        year: "2024 - Present",
+        desc: "Techdew UX design Pvt Ltd",
+      },
+    ],
+  },
+  {
+    title: "Education",
+    id: "Education",
+    content: [
+      {
+        title: "B.Tech in Electronics and Communication",
+        year: "2017-2023",
+        desc: "Karunya Institute of Technology",
+      },
+      {
+        title: "Full stack web development",
+        year: "2022",
+        desc: "Guvi Geek Networks",
+      },
+    ],
+  },
+  {
+    title: "Certifications",
+    id: "Certifications",
+    content: [
+      {
+        title: "Javascript",
+        desc: "Guvi Geek Networks",
+        link: "https://www.guvi.in/share-certificate/321Vm29L8011n658v5",
+      },
+      {
+        title: "MERN stack",
+        desc: "Guvi Geek Networks",
+        link: "https://www.guvi.in/certificate?id=vAgt1R7U1D245T7361",
+      },
+    ],
+  },
+];
+const TabContent = ({ content }) => (
+  <ul className="list-disc pl-2">
+    {content.map((item, index) => (
+      <li key={index} className="mt-2">
+        <div className="flex">
+          <h4 className="font-semibold">{item.title}</h4>
+          {item.link && (
+            <a
+              href={item.link}
+              className="text-emerald-600"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              - Certificate Link
+            </a>
+          )}
+        </div>
+        <p className="text-base text-slate-400">{item.desc}</p>
+        <p className="text-sm">{item.year}</p>
+      </li>
+    ))}
+  </ul>
+);
 export default function AboutSection() {
   const [tab, setTab] = useState("Education");
   const [isPending, startTransition] = useTransition();
@@ -69,13 +141,7 @@ export default function AboutSection() {
             current trends in technology to continuously improve my skills and
             deliver cutting-edge solutions.
           </p>
-          <div className="flex flex-row mt-8">
-            {/* <TabButton
-              selectTab={() => handleTabChange("Skills")}
-              active={tab === "Skills"}
-            >
-              Skills
-            </TabButton> */}
+          <div className="flex flex-row mt-4">
             <TabButton
               selectTab={() => handleTabChange("Education")}
               active={tab === "Education"}
@@ -88,9 +154,20 @@ export default function AboutSection() {
             >
               Certifications
             </TabButton>
+            <TabButton
+              selectTab={() => handleTabChange("Experience")}
+              active={tab === "Experience"}
+            >
+              Experience
+            </TabButton>
           </div>
-          <div className="mt-8">
-            {Tab_Data.find((t) => t.id === tab).content}
+          <div className="mt-4">
+            {/* {Tab_Data.find((t) => t.id === tab).content} */}
+            {tabContent.find((t) => t.id === tab)?.content && (
+              <TabContent
+                content={tabContent.find((t) => t.id === tab).content}
+              />
+            )}
           </div>
         </div>
       </div>
