@@ -61,7 +61,7 @@ const tabContent = [
     content: [
       {
         title: "B.Tech in Electronics and Communication",
-        year: "2017-2023",
+        year: "2017-2021",
         desc: "Karunya Institute of Technology",
       },
       {
@@ -101,7 +101,7 @@ const TabContent = ({ content }) => (
               target="_blank"
               rel="noopener noreferrer"
             >
-              - Certificate Link
+              - Certificate
             </a>
           )}
         </div>
@@ -134,10 +134,11 @@ export default function AboutSection() {
         />
         <div className="mt-4 md:mt-0 text-left flex flex-col h-full">
           <h2 className="text-4xl font-bold text-white mb-4">About Me</h2>
-          <p className="text-base lg:text-lg">
-            I'm a full stack developer specializing in the MERN stack, currently
-            working as a frontend developer. Focused on developing responsive
-            web applications and perfomance optimization. I stay updated with
+          <p className="text-base">
+            I'm a full stack developer specializing in the MERN stack, with over
+            2 years of experience in frontend development. Currently working as
+            a frontend developer, I focus on developing responsive web
+            applications and performance optimization. I stay updated with
             current trends in technology to continuously improve my skills and
             deliver cutting-edge solutions.
           </p>
@@ -154,12 +155,12 @@ export default function AboutSection() {
             >
               Certifications
             </TabButton>
-            <TabButton
+            {/* <TabButton
               selectTab={() => handleTabChange("Experience")}
               active={tab === "Experience"}
             >
               Experience
-            </TabButton>
+            </TabButton> */}
           </div>
           <div className="mt-4">
             {/* {Tab_Data.find((t) => t.id === tab).content} */}

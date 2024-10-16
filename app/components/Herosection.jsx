@@ -43,7 +43,7 @@ export default function Herosection() {
           <div>
             <button className="px-6 py-3 text-black rounded-full mr-4   bg-white hover:bg-slate-200  ">
               <Link
-                href="https://drive.google.com/file/d/15WEPtKePLQa_wQRrXIuSlROflHfpCMdE/view?usp=sharing"
+                href="https://drive.google.com/file/d/1e20iY6P2pjsH53liqslMU8-QPCJLm3CJ/view?usp=sharing"
                 target="_blank"
               >
                 Resume
